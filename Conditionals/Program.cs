@@ -41,6 +41,7 @@ namespace Conditionals
             
             //calculating the total bill
             double totalBill = numberDiners * costPerDiner;
+
             /* 
             //conditional to determine which discount they get
             if(totalBill >=50)
@@ -80,13 +81,17 @@ namespace Conditionals
                 Console.WriteLine("You got a B! Not Bad");
             }*/
 
+            //creating a demographic report based on age
+            //ask the user to enter their age
+            //determine which category each user fits into based on age
+
             Console.WriteLine("Please enter your age:");
             int age = int.Parse(Console.ReadLine());
             if (age <= 2)
             {
                 Console.WriteLine("Still in Mama's arms");
             }
-            else if (age >=3 && age <= 4)
+            else if (age ==3 || age == 4)
             {
                 Console.WriteLine("Preschool Maniac");
             }
@@ -110,9 +115,29 @@ namespace Conditionals
             {
                 Console.WriteLine("Working for the Man");
             }
-            else if (age >=66)
+            else if (age >=66 && age <=100)
             {
                 Console.WriteLine("The Golden Years");
+            }
+            else if (age <0 || age >100)
+            {
+                Console.WriteLine("This program is for humans.");
+            }
+
+            //Write a console application that asks the user for a number. Tell the user if that number is even or odd
+            //Modulus operator %
+
+            Console.WriteLine("Please enter a number:");
+            int inputNumber = int.Parse(Console.ReadLine());
+            //int test = inputNumber % 2;
+            //if (test == 0)
+            if(inputNumber % 2 == 0) //can perform the calculation in the IF statement
+            {
+                Console.WriteLine("This number is even.");
+            }                   
+            else
+            {
+                Console.WriteLine("This number is odd.");
             }
         }
     }
